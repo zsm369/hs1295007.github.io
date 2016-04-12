@@ -1,0 +1,27 @@
+<html>
+<head>
+    <script>
+        function getAwords(words) {
+            var return_words = [];
+            for (var i = 0; i < words.length; i++) {
+                if (words[i].startsWith('a') || words[i].startsWith('A'))
+                    return_words.push(words[i]);
+            }
+            return return_words;
+        }
+        function getWordsBeginWith(words, begin_char) {
+            var return_words = [];
+            for (var i = 0; i < words.length; i++) {
+                if (words[i].startsWith(begin_char.toLowerCase()) || words[i].startsWith(begin_char.toUpperCase()))
+                    return_words.push(words[i]);
+            }
+            return return_words;
+        }
+        var test = ['apple', 'Apple', 'banana', 'Blueberry', 'dress','carrot','peach','Disert', 'Cat' , 'Passworc'];
+        var ret = getAwords(test);
+        console.log(ret.join(','));
+        var ret2 = getWordsBeginWith(test, 'd');
+        console.log(ret2.join(','));
+    </script>
+</head>
+</html>
