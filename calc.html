@@ -58,6 +58,14 @@
 
             display_debug();
         }
+        function button_dou(){
+            var text = document.getElementById("text_display");
+            first_val = parseInt(text.value);
+            text.value = '';
+            operand = 'dou';
+
+            display_debug();
+        }
 
         function button_equal() {
             var text = document.getElementById("text_display");
@@ -73,6 +81,9 @@
             }
             else if(operand == 'div'){
                 text.value = ''+ (first_val / second_val);
+            }
+            else if(operand == 'dou'){
+                text.value = ''+ (first_val * first_val);
             }
             operand = '';
             display_debug();
@@ -101,6 +112,7 @@
             document.getElementById("btn_div").onclick = button_div;
             document.getElementById("btn_equal").onclick = button_equal;
             document.getElementById("btn_clear").onclick = button_clear;
+            document.getElementById("btn_dou").onclick = button_dou;
 
         }
     </script>
@@ -145,7 +157,7 @@
             <td><button class="num_btn">8</button></td>
             <td><button class="num_btn">9</button></td>
             <td><button id="btn_mux">×</button></td>
-            <td><button>^</button></td>
+            <td><button id="btn_dou">^</button></td>
         </tr>
         <tr>
             <td><button class="num_btn">*</button></td>
@@ -170,3 +182,4 @@
 </div>
 </body>
 </html>
+
