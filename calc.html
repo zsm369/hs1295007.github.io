@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4칙 연산 계산기</title>
+    <script src = "111.js"></script>
+    <script>
+        var first_val;
+        var second_val;
+        var operand;
+
+        function display_debug() {
+            var debug_out = document.getElementById('debug_area');
+            var debug_text = "<p>첫번째 값:" + first_val + "</p>";
+            debug_text += "<p>연산:" + operand + "</p>";
+            debug_out.style.background = "cadetblue";
+            debug_out.innerHTML = debug_text;
+        }
+
+        function button_click() {
+            var text = document.getElementById("text_display");
+            var num = this.textContent;
+            text.value = text.value + num;
+
+            display_debug();
+        }
+
+        function button_plus() {
+            var text = document.getElementById("text_display");
+            first_val = parseInt(text.value);
+            text.value = '';
+            operand = 'plus';
+
+            display_debug();
+        }
+
+        function button_sub(){
+            var text = document.getElementById("text_display");
+            first_val = parseInt(text.value);
+            text.value = '';
+            operand = 'sub';
+
+            display_debug();
+        }
+        function button_mux(){
+            var text = document.getElementById("text_display");
+            first_val = parseInt(text.value);
+            text.value = '';
+            operand = 'mux';
+
+            display_debug();
+        }
+        function button_div(){
+            var text = document.getElementById("text_display");
+            first_val = parseInt(text.value);
+            text.value = '';
+            operand = 'div';
+
+            display_debug();
+        }
+
+        function button_equal() {
+            var text = document.getElementById("text_display");
+            var second_val = parseInt(text.value);
+            if (operand == 'plus') {
+                text.value = '' + (first_val + second_val);
+            }
+            else if(operand == 'sub'){
+                text.value = '' + (first_val - second_val);
+            }
+            else if(operand == 'mux'){
+                text.value = ''+ (first_val * second_val);
+            }
+            else if(operand == 'div'){
+                text.value = ''+ (first_val / second_val);
+            }
+            operand = '';
+            display_debug();
+        }
+
+        function button_clear() {
+            var text = document.getElementById("text_display");
+            text.value = '';
+            first_val = '';
+            second_val= '';
+            operand = '';
+            result = '';
+
+
+            display_debug();
+        }
+
+        window.onload = function (e) {
+            var buttons = document.getElementsByClassName("num_btn");
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].onclick = button_click;
+            }
+            document.getElementById("btn_plus").onclick = button_plus;
+            document.getElementById("btn_sub").onclick = button_sub;
+            document.getElementById("btn_mux").onclick = button_mux;
+            document.getElementById("btn_div").onclick = button_div;
+            document.getElementById("btn_equal").onclick = button_equal;
+            document.getElementById("btn_clear").onclick = button_clear;
+
+        }
+    </script>
+    <style>
+        #back-rounge{
+            width: 200px;
+            margin: 0px; padding: 0px;
+            border: 3px solid gold;
+            border-radius: 0px;
+            box-shadow: 0px 0px 22px 0px rgba(255,215,0,0.75);
+        }
+    </style>
+</head>
+<body>
+
+<div id="back-rounge">
+    <h2>&nbsp;&nbsp;&nbsp;미구현계산기</h2>
+    <br />
+    <table width="180px" height="200px" style="border: 3px solid silver" style="align-content: center">
+        <tr>
+            <td colspan="5" style="padding: 9px">
+            <input type="text" id="text_display"/></td>
+        </tr>
+        <tr><td></td><td></td><td></td><td></td></tr>
+        <tr><td></td><td></td><td></td><td></td></tr>
+        <tr>
+            <td><button class="num_btn">1</button></td>
+            <td><button class="num_btn">2</button></td>
+            <td><button class="num_btn">3</button></td>
+            <td><button id="btn_plus">+</button></td>
+            <td><button id="btn_clear">Del</button></td>
+        </tr>
+        <tr>
+            <td><button class="num_btn">4</button></td>
+            <td><button class="num_btn">5</button></td>
+            <td><button class="num_btn">6</button></td>
+            <td><button id="btn_sub">-</button></td>
+            <td><button>√</button></td>
+        </tr>
+        <tr>
+            <td><button class="num_btn">7</button></td>
+            <td><button class="num_btn">8</button></td>
+            <td><button class="num_btn">9</button></td>
+            <td><button id="btn_mux">×</button></td>
+            <td><button>^</button></td>
+        </tr>
+        <tr>
+            <td><button class="num_btn">*</button></td>
+            <td><button class="num_btn">0</button></td>
+            <td><button class="num_btn">#</button></td>
+            <td><button id="btn_div">/</button></td>
+            <td><button>cos</button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button id="btn_equal">=</button></td>
+            <td></td>
+            <td><button>sin</button></td>
+            <td><button>tan</button></td>
+        </tr>
+    </table>
+    <br />
+    <div id="debug_area">
+    </div>
+</div>
+<div id="debug_area">
+</div>
+</body>
+</html>
