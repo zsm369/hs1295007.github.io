@@ -1,3 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Exercise</title>
+    <script   src="https://code.jquery.com/jquery-1.12.3.min.js"   integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ="   crossorigin="anonymous"></script>
+    <script>
+        var first_val;
+        var operand;
+
+        function display_debug() {
+            var debug_text = "<p>first_val:" + first_val + "</p>";
+            debug_text += "<p>operand:" + operand + "</p>";
+            $('#debug_area').html(debug_text);
+        }
+
         function button_click() {
             var num = $(this).text(); //this.textContent;
             var newval = $('#text_display').val() + num;
