@@ -25,7 +25,13 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand">김상훈</a>
+                <a href="#" data-toggle="tooltip" title="Hooray!">안돼는데?</a>
             </div>
+            <script>
+                $(document).ready(function(){
+                    $('[data-toggle="tooltip"]').tooltip();
+                });
+            </script>
             <div class="nav navbar-nav">
                 <div class="btn-group">
                     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
