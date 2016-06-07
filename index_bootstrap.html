@@ -17,6 +17,10 @@
         .jumbotron {
             background: rgb(193, 137, 146);
         }
+        .container-fluid{
+            padding-top: 0px;
+            padding_bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -32,24 +36,23 @@
                     $('[data-toggle="tooltip"]').tooltip();
                 });
             </script>
-            <div class="nav navbar-nav">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                        소개<span class="caret"></span></button>
-                    <ul class="dropdown-menu" role="menu">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
                         <li><a href="#">정보</a></li>
                         <li><a href="#">수업</a></li>
                         <li><a href="#">좋아하는 것들</a></li>
                         <li><a href="#">시간표</a></li>
                     </ul>
-                    </div>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-primary">정보</button>
-                    <button type="button" class="btn btn-primary">수업</button>
-                    <button type="button" class="btn btn-primary">좋아하는 것들</button>
-                    <button type="button" class="btn btn-primary">시간표</button>
-            </div>
-        </div>
+                </div>
             </div>
     </nav>
     <div class="jumbotron">
@@ -165,7 +168,7 @@
                 <tr>
                     <td>7교시</td>
                     <td rowspan="3">컴퓨터 구조(김은주 교수님)</td>
-                    <td>>제조공정 자동화(유재건 교수님)</td>
+                    <td>제조공정 자동화(유재건 교수님)</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -192,8 +195,9 @@
 </div>
 <hr>
 <div class="row">
-    <p><a href="hs1295007.github.io/index.html"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소개글 보러가기</a></p>
+    <p><a href="http://hs1295007.github.io/index.html"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;소개글 보러가기</a></p>
 </div>
 </div>
 </body>
 </html>
+
