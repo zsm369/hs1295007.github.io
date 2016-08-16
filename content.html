@@ -2,7 +2,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['login'])) {
-        header("Location: login.php");
+        header("Location: login.html");
     }
 ?>
 <html>
@@ -65,6 +65,6 @@ mysqli_close($con);
 <h1> Content Page </h1>
 <h2> Welcome <?=$_SESSION['login']?> </h2>
 <hr>
-<b> <a href="./logout.php" align="right"> Logout </a> </b>
+<b> <a href="./logout.html" align="right"> Logout </a> </b>
 </body>
 </html>
