@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
     
     if ( mysqli_num_rows($result) > 0 ) {
             $_SESSION['login']=$username;
-            header("Location: content.php");
+            header("Location: content.html");
     } else {
         echo "Wrong username or password !";
     }
