@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<head>
+<meta charset = "utf-8">
+</head>
+<html>
 <?php
 session_start();
 
@@ -27,13 +31,12 @@ if (isset($_POST['submit'])) {
 
 }
 ?>
-<html>
 <head>
     <title> Login Page </title>
 </head>
 <body>
 <center>
-    <form method="post" action="login.php">
+    <form method="post" action="login.html">
     <table border="2" >
         <tr>
             <td colspan="2" align="center"> Login </td>
@@ -52,7 +55,7 @@ if (isset($_POST['submit'])) {
         </tr>
         </table>
     </form>
-    <b> Not registered yet? <a href="registration.php"> Registeration </a></b>
+    <b> Not registered yet? <a href="registration.html"> Registeration </a></b>
 </center>
 </body>
 </html>
